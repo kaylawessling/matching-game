@@ -18,7 +18,7 @@ class App extends PureComponent {
   };
 
   static duplicateCard = () => {
-    return [0,1,2,3,4,5].reduce((preValue, current, index, array) => {
+    return [0,1,2,3,4,5,6,7].reduce((preValue, current, index, array) => {
       return preValue.concat([current, current])
     },[]);
   };
@@ -108,4 +108,4 @@ class App extends PureComponent {
   }
 }
 
-export default App;
+export default EasyGame;
