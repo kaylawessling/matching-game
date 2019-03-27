@@ -16,6 +16,17 @@ h3 {
 
 }
 
+/********* Navigation Bar ********/
+.main-nav a:hover,
+.main-nav .active {
+  color: white;
+  background-color: darkblue;
+}
+
+.main-nav li {
+  display: inline-block;
+}
+
 .example-box {
   display: flex;
   flex-direction: column;
