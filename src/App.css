@@ -1,5 +1,20 @@
+:root {
+  --web-view-ids: home;
+}
+
 body {
   margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  margin top:
+  font-family: "Helvetica"
+}
+
+h3 {
+
 }
 
 .grid-container {
@@ -43,6 +58,14 @@ body {
   height: 3em;
   color: white;
   background-color: #5168e9;
+  border: 0;
+}
+
+.facebook-button {
+  width: 15em;
+  height: 3em;
+  color: white;
+  background-color: blue;
   border: 0;
 }
 
@@ -98,4 +121,19 @@ body {
 
 .react-card-front {
   position: unset !important;
+}
+
+
+/*********** Media Queries ************/
+@media only screen and (max-width: 786px) {
+  .header-container {
+    width: 50%
+    height: 30em;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    paddint-top: 5em;
+  }
 }
