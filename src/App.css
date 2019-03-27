@@ -7,14 +7,21 @@ body {
   padding: 0;
 }
 
-h1 {
+ {
   margin: 0;
-  margin top:
   font-family: "Helvetica"
 }
 
 h3 {
 
+}
+
+.example-box {
+  display: flex;
+  flex-direction: column;
+  padding-right: 5em;
+  color: gray;
+  font-size: 15px;
 }
 
 .grid-container {
@@ -24,7 +31,7 @@ h3 {
   padding: 10px 150px 10px 150px;
 }
 
-.grid-header-container {
+.header-container {
   display: grid;
   grid-template-columns: auto auto auto;
   background-color: #c9d1f5;
@@ -70,7 +77,7 @@ h3 {
 }
 
 .game-status-text {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Helvetica, sans-serif;
   color: rgb(24, 21, 16);
   font-weight: bold;
 }
@@ -127,7 +134,7 @@ h3 {
 /*********** Media Queries ************/
 @media only screen and (max-width: 786px) {
   .header-container {
-    width: 50%
+    width: 50%;
     height: 30em;
   }
 
