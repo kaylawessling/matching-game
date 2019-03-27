@@ -1,4 +1,10 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import {
+  BrowserRouter,
+  Route
+} from 'react-router-dom';
+
+//App components
 import Header from './Header';
 import Home from './Home';
 import Card from './Card';
@@ -14,9 +20,9 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route path="/EasyGame" render={ () => <EasyGame title='Easy' /> }
       <Route path="/HardGame" component={HardGame} />
+    </div>
+  </BrowserRouter>
       // <Route path="/restartGame" component={restartGame} title='restartGame' />
-} />
-
-)
+);
 
 export default App;
