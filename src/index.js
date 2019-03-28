@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.js';
 import App from './App';
+import Home from './Home';
+import Header from './Header';
+import EasyGame from './EasyGame';
+import Card from './Card';
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
