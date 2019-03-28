@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import Header from './Header';
 import Card from './Card';
 import GameOver from './GameOver';
+import Share from './Share';
 
 import './App.css';
 
