@@ -12,6 +12,8 @@ import GameOver from './GameOver';
 import EasyGame from './EasyGame';
 import HardGame from './HardGame';
 
+import './App.css';
+
 const App = () => (
   <BrowserRouter>
     <div className="container">
