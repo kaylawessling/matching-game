@@ -1,15 +1,22 @@
 import React, { PureComponent } from 'react';
+import {
+  BrowserRouter,
+  Route,
+  Switch
+} from 'react-router-dom';
+
+// App components
 import Header from './Header';
 import Card from './Card';
 import GameOver from './GameOver';
+import EasyGame from './EasyGame';
+import HardGame from './HardGame';
 import Share from './Share';
-
-import './App.css';
 
 class App extends PureComponent {
 
   state = {
-    isFlipped: Array(16).fill(false),
+    isFlipped: Array(12).fill(false),
     shuffledCard: App.duplicateCard().sort(() => Math.random() - 0.5),
     clickCount: 1,
     prevSelectedCard: -1,
@@ -17,7 +24,7 @@ class App extends PureComponent {
   };
 
   static duplicateCard = () => {
-    return [0,1,2,3,4,5,6,7].reduce((preValue, current, index, array) => {
+    return [0,1,2,3,4,5].reduce((preValue, current, index, array) => {
       return preValue.concat([current, current])
     },[]);
   };
@@ -71,7 +78,7 @@ class App extends PureComponent {
 
   restartGame = () => {
     this.setState({
-      isFlipped: Array(16).fill(false),
+      isFlipped: Array(12).fill(false),
       shuffledCard: App.duplicateCard().sort(() => Math.random() - 0.5),
       clickCount: 1,
       prevSelectedCard: -1,

@@ -6,11 +6,11 @@ import Share from './Share';
 
 import './App.css';
 
-class App extends PureComponent {
+class EasyGame extends PureComponent {
 
   state = {
     isFlipped: Array(12).fill(false),
-    shuffledCard: App.duplicateCard().sort(() => Math.random() - 0.5),
+    shuffledCard: EasyGame.duplicateCard().sort(() => Math.random() - 0.5),
     clickCount: 1,
     prevSelectedCard: -1,
     prevCardId: -1
@@ -71,8 +71,8 @@ class App extends PureComponent {
 
   restartGame = () => {
     this.setState({
-      isFlipped: Array(16).fill(false),
-      shuffledCard: App.duplicateCard().sort(() => Math.random() - 0.5),
+      isFlipped: Array(12).fill(false),
+      shuffledCard: EasyGame.duplicateCard().sort(() => Math.random() - 0.5),
       clickCount: 1,
       prevSelectedCard: -1,
       prevCardId: -1
