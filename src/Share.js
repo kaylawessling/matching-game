@@ -1,9 +1,7 @@
 import React from 'react';
 import Header from 'header';
 
-<h1>Enjoy the game?</h1>
-
-<h3>Share it on Facebook!</h3>
+<h1>Enjoy the game? Share it on Facebook!</h1>
 
 <div id="shareBtn" class="btn btn-success clearfix">Share</div>
 
