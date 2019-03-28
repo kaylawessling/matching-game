@@ -2,6 +2,8 @@
 // import Header from './Header';
 // import EasyGame from './EasyGame';
 //
+import './App.css';
+
 // const title = ({ title }) => (
 //   <div className="justify-center">
 //     <h1>It's a Match!</h1>
