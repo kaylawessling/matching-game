@@ -4,7 +4,7 @@ import Card from './Card';
 import GameOver from './GameOver';
 import Share from './Share';
 
-import './App.css';
+import './App.style.css';
 
 class EasyGame extends PureComponent {
 
