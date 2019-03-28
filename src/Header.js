@@ -1,9 +1,7 @@
 import React from 'react';
-import { Route, Navlink, Redirect } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-import { EasyGame, HardGame, Share } from 'src';
-
-const Nav = ({match}) => (
+const Header = () => (
   <span className="grid-header-container">
     <div className="nav">
       <ul className="nav-bar">

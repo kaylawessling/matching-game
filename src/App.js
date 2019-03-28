@@ -1,19 +1,11 @@
-import React from 'react';
-import {
-  BrowserRouter,
-  Route,
-  Switch
-} from 'react-router-dom';
+import React, { Component } from 'react';
 
 // App components
 import Header from './Header';
 import Card from './Card';
 import GameOver from './GameOver';
-import EasyGame from './EasyGame';
-import HardGame from './HardGame';
-import Share from './Share';
 
-class App extends PureComponent {
+class App extends Component {
 
   state = {
     isFlipped: Array(12).fill(false),

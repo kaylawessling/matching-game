@@ -3,15 +3,14 @@ import Header from './Header';
 import Card from './Card';
 import GameOver from './GameOver';
 import EasyGame from './EasyGame';
-import HardGame from './HardGame';
 
 import './App.css';
 
-class App extends PureComponent {
+class HardGame extends PureComponent {
 
   state = {
     isFlipped: Array(50).fill(false),
-    shuffledCard: App.duplicateCard().sort(() => Math.random() - 0.5),
+    shuffledCard: HardGame.duplicateCard().sort(() => Math.random() - 0.5),
     clickCount: 1,
     prevSelectedCard: -1,
     prevCardId: -1
@@ -70,10 +69,10 @@ class App extends PureComponent {
     }
   };
 
-  restartGame = () => {
+  restartHardGame = () => {
     this.setState({
       isFlipped: Array(50).fill(false),
-      shuffledCard: App.duplicateCard().sort(() => Math.random() - 0.5),
+      shuffledCard: HardGame.duplicateCard().sort(() => Math.random() - 0.5),
       clickCount: 1,
       prevSelectedCard: -1,
       prevCardId: -1
@@ -87,8 +86,8 @@ class App extends PureComponent {
   render() {
     return (
      <div>
-       <Header restartGame={this.restartGame} />
-       { this.isGameOver() ? <GameOver restartGame={this.restartGame} /> :
+       <Header restartHardGame={this.restartHardGame} />
+       { this.isGameOver() ? <GameOver restartHardGame={this.restartHardGame} /> :
        <div className="container">
           {
             this.state.shuffledCard.map((cardNumber, index) =>
