@@ -1,24 +1,10 @@
 import React from 'react';
 // import Header from 'header';
 
-const Share = () => {
-return(
-  <div>
-<h1>Enjoy the game? Share it on Facebook!</h1>
-
-<div id="shareBtn" class="btn btn-success clearfix">Share</div>
-
-<h3 style={{"margin-top": "50px"}}>
-  <hr />
-  <a className="btn btn-small" target="_blank"  href="https://developers.facebook.com/docs/sharing/reference/share-dialog">Share Dialog Documentation</a>
-</h3>
-</div>)
-
-// weather API component
-  constructor( {
-    super( {
-    this.state = {weather: 'Louisville'}
-  }))
+class Share extends Component {
+constructor () {
+  super()
+    this.state={weather:''}
 }
 
   componentDidMount() {
@@ -30,7 +16,14 @@ return(
           this.setState({
             weather: result.data.image_original_url
           });
-  };
+
+  render() {
+    return (
+      <div className="weather">
+      <img src={this.state.weather}></img>
+      </div>
+    );
+  }
 }
 
 // <script>
