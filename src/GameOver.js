@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Share from './Share';
 
 class GameOver extends Component {
-// render a 'yay' gif
 constructor() {
   super()
     this.state = {image: ''}
@@ -20,14 +19,14 @@ componentDidMount() {
       }
     )
 
-  render () ;
+  render () {
     return (
       <div className="yay">
         <h1>Game Over!</h1>
         <img src={this.state.image}></img>
         <h3>If you ejoyed playing this game, share it!</h3>
       </div>
-    )
+    );
   }
 }
 
