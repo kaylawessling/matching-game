@@ -16,10 +16,9 @@ return(
 
 // weather API component
   constructor( {
-    super() {
-    this.state = {weather: ''}
-    }
-  )
+    super( {
+    this.state = {weather: 'Louisville'}
+  }))
 }
 
   componentDidMount() {
