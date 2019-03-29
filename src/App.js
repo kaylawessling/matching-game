@@ -13,13 +13,19 @@ import EasyGame from './EasyGame';
 import HardGame from './HardGame';
 import Share from './Share';
 
-const App = () => (
-  <BrowserRouter>
-    <div className="container">
-      <Route path="/" component={Home} />
-      <HardGame />
-      <Share />
-    </div>
-  </BrowserRouter>
-);
+class App extends Component{
+  render(){
+    return(
+    <BrowserRouter>
+      <div className="container">
+        <Header />
+        <Route exact path="/" component={Home} />
+        <Route path="/HardGame" component={HardGame} />
+        <Route path="/EasyGame" component={EasyGame} />
+        <Route path="/Share" component={Share} />
+      </div>
+    </BrowserRouter>
+    );
+  }
+}
 export default App;

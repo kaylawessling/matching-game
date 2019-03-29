@@ -8,6 +8,25 @@ const GameOver = ({ restartGame }) => (
     <button className="restart-button" onClick={restartGame}>Restart Game</button>
     <button className="share-button" onClick={Share}>Share It!</button>
   </div>
+)
+
+// render a 'yay' gif
+constructor(
+  super()
+    this.state = {image: ''}
+)
+
+componentDidMount() {
+  fetch("https://api.giphy.com/v1/gifs/translate?api_key=jON8WWoZFkPIiwCKYY66FZvOenhUJN6b&s=yay")
+    .then(res => res.json())
+    .then(
+      (result) => {
+        console.log('api returned', result)
+        this.setState({
+          image: result.data.source_post_url
+        });
+      }
+    )
 );
 
 export default GameOver;

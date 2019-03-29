@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import Header from './Header';
 import Card from './Card';
 import GameOver from './GameOver';
@@ -6,20 +6,46 @@ import Share from './Share';
 
 import './App.style.css';
 
-class EasyGame extends PureComponent {
+class EasyGame extends Component {
 
   state = {
     isFlipped: Array(12).fill(false),
-    shuffledCard: EasyGame.duplicateCard().sort(() => Math.random() - 0.5),
+    shuffledCard: EasyGame.duplicateCard(),
     clickCount: 1,
     prevSelectedCard: -1,
-    prevCardId: -1
+    prevCardId: -1,
+    items: []
   };
 
+  static generateRandomNumber(){
+    return Math.floor(Math.random() * (7 - 1) + 1)
+  }
+
+  static checkNumber(arr, random) {
+    let result = arr.reduce((a, e, i) => {
+      if(e === random) {
+        a.push(i)
+      }
+      return a
+    }, [])
+
+    if(result.length < 2) {
+      return true
+    }
+    return false;
+  }
+
   static duplicateCard = () => {
-    return [0,1,2,3,4,5].reduce((preValue, current, index, array) => {
-      return preValue.concat([current, current])
-    },[]);
+    let results = []
+    for(var i=0; i<12; i++){
+      let random = this.generateRandomNumber()
+      while(!this.checkNumber(results, random)) {
+        random = this.generateRandomNumber()
+      }
+      results.push(random)
+    }
+    console.log(results)
+    return results
   };
 
   handleClick = event => {
