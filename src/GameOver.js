@@ -15,9 +15,9 @@ componentDidMount() {
         console.log('api returned', result)
         this.setState({
           image: result.data.source_tld
-        });
-      }
-    )
+        })
+      });
+  };
 
   render () {
     return (
