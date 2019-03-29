@@ -24,7 +24,7 @@ componentDidMount() {
       (result) => {
         console.log('api returned', result)
         this.setState({
-          image: result.data.source_post_url
+          image: result.data.source_tld
         });
       }
     )

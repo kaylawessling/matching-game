@@ -15,10 +15,12 @@ return(
 </div>)
 
 // weather API component
-  constructor() {
-    super();
+  constructor( {
+    super() {
     this.state = {weather: ''}
-  }
+    }
+  )
+}
 
   componentDidMount() {
     fetch("https://api.openweathermap.org/data/2.5/weather?q=Louisville")
