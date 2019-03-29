@@ -8,6 +8,7 @@ import './App.style.css';
 
 class EasyGame extends Component {
 
+// creates deck of cards with 6 pairs (12 cards total)
   state = {
     isFlipped: Array(12).fill(false),
     shuffledCard: EasyGame.duplicateCard(),
@@ -48,6 +49,8 @@ class EasyGame extends Component {
     return results
   };
 
+// Game Play
+// flips card(s) when clicked
   handleClick = event => {
     event.preventDefault();
     const cardId = event.target.id;
@@ -64,6 +67,7 @@ class EasyGame extends Component {
         clickCount: this.state.clickCount + 1
       }));
 
+// sets number of clicks allowed to two
       if (this.state.clickCount === 2) {
         this.setState({ clickCount: 1 });
         const prevCardId = this.state.prevCardId;
@@ -75,6 +79,7 @@ class EasyGame extends Component {
     }
   };
 
+// checks if card is a match, if yes, cards are hidden, if no, cards flip over again
   isCardMatch = (card1, card2, card1Id, card2Id) => {
     if (card1 === card2) {
       const hideCard = this.state.shuffledCard.slice();
@@ -105,6 +110,7 @@ class EasyGame extends Component {
     });
   };
 
+// checks if game is over
   isGameOver = () => {
     return this.state.isFlipped.every((element, index, array) => element !== false);
   };

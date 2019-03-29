@@ -1,6 +1,7 @@
 import React from 'react';
 import Share from './Share';
 
+// game over text, restart buttons, and share button
 const GameOver = ({ restartGame }) => (
   <div className="justify-center">
     <h1>Game Over!</h1>
