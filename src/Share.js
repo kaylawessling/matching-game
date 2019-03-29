@@ -15,25 +15,15 @@ constructor () {
           console.log('api returned', result)
           this.setState({
             weather: result.data.image_original_url
-          });
+          })
 
-  render() {
+  render();
     return (
       <div className="weather">
       <img src={this.state.weather}></img>
       </div>
     );
   }
-}
-
-// <script>
-// document.getElementById('shareBtn').onclick = function() {
-//   FB.ui({
-//     method: 'share',
-//     display: 'popup',
-//     href: 'https://developers.facebook.com/docs/',
-//   }, function(response){});
-// }
-// </script>
+,
 
 export default Share;
