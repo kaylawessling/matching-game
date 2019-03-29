@@ -16,14 +16,17 @@ constructor () {
           this.setState({
             weather: result.data.image_original_url
           })
+        })
+      }
 
-  render();
+  render() {
     return (
       <div className="weather">
       <img src={this.state.weather}></img>
       </div>
     );
   }
-,
+}
+
 
 export default Share;
